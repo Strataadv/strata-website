@@ -1,130 +1,709 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Strata Growth Advisors — Free Growth Audit</title>
-  <meta name="description" content="AI-powered growth diagnostics for SMEs. Identify profit leaks and unlock margin improvement.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-13ENVQTEC4"></script>
+  <title>AI Business Analysis & Growth Insights | Strata Growth Advisors</title>
+  <meta name="description" content="Identify hidden inefficiencies and unlock growth with AI-powered operational analysis. Get your personalized action plan in minutes." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Turn Operational Chaos Into Predictable Growth" />
+  <meta property="og:description" content="Strata reveals where your business is losing money and how to fix it — instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://strataadv.com/" />
+  <meta property="og:image" content="https://strataadv.com/assets/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Turn Operational Chaos Into Predictable Growth" />
+  <meta name="twitter:description" content="AI-powered operational diagnostic report in minutes." />
+  <meta name="twitter:image" content="https://strataadv.com/assets/og-image.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://strataadv.com/" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0F2A44">
+
+  <!-- Optional: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- OPTIONAL GA4: paste your GA4 snippet here later -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-13ENVQTEC4');
-
-    /* CTA Tracking */
-    function trackFreeAnalysisClick() {
-      try {
-        if (typeof gtag === "function") {
-          gtag("event", "free_analysis_click", {
-            event_category: "cta",
-            event_label: "Get your free analysis",
-            transport_type: "beacon"
-          });
-        }
-      } catch (e) {}
-      return true; // do not block navigation
-    }
-
-    function trackSignupClick() {
-      try {
-        if (typeof gtag === "function") {
-          gtag("event", "signup_click", {
-            event_category: "cta",
-            event_label: "Create account",
-            transport_type: "beacon"
-          });
-        }
-      } catch (e) {}
-      return true;
-    }
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
+  -->
 
-  <link rel="stylesheet" href="style.css">
   <style>
-    body{font-family:Inter,Arial;background:#0b1220;color:#e6edf3;margin:0}
-    section{padding:70px 20px;max-width:1100px;margin:auto}
-    .hero{text-align:center}
-    .hero h1{font-size:42px;margin-bottom:12px}
-    .hero p{opacity:.8;margin-bottom:20px;max-width:820px;margin-left:auto;margin-right:auto}
-    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:10px}
-    .cta-primary{background:#2f81f7;padding:14px 26px;border-radius:10px;color:#fff;text-decoration:none;display:inline-block;font-weight:600}
-    .cta-secondary{border:1px solid rgba(255,255,255,.18);padding:14px 26px;border-radius:10px;color:#e6edf3;text-decoration:none;display:inline-block;font-weight:600;background:rgba(255,255,255,.03)}
-    .microcopy{opacity:.75;font-size:13px;margin-top:12px}
-    .value ul{line-height:1.9;margin:0;padding-left:18px}
-    .how ol{line-height:1.9;margin:0;padding-left:18px}
-    .card{background:#111827;border-radius:14px;padding:24px;margin-top:20px;border:1px solid rgba(255,255,255,.06)}
-    footer{padding:40px;text-align:center;opacity:.6}
-    a{color:inherit}
+    :root{
+      --bg:#F7F9FC;
+      --card:#FFFFFF;
+      --text:#0B1220;
+      --muted:#5B6577;
+      --border: rgba(15, 42, 68, 0.12);
+      --navy:#0F2A44;
+      --blue:#2E6BFF;
+      --blue2:#4F86FF;
+      --shadow:0 18px 50px rgba(15, 42, 68, 0.10);
+      --shadow2:0 10px 28px rgba(15, 42, 68, 0.08);
+      --r24:24px;
+      --max:1140px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 500px at 20% -10%, rgba(46, 107, 255, 0.20), transparent 60%),
+        radial-gradient(900px 450px at 80% 0%, rgba(15, 42, 68, 0.18), transparent 55%),
+        var(--bg);
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--max); margin:0 auto; padding:0 24px}
+    .section{padding:84px 0}
+    @media (min-width: 960px){
+      .section{padding:96px 0}
+      .container{padding:0 48px}
+    }
+
+    /* Header */
+    .header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(247,249,252,0.78);
+      border-bottom: 1px solid rgba(15, 42, 68, 0.08);
+    }
+    .headerInner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background: rgba(255,255,255,0.8);
+      border:1px solid rgba(15,42,68,0.10);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .logo img{width:100%; height:100%; object-fit:cover}
+    .brandText{display:flex; flex-direction:column; line-height:1.1}
+    .brandName{font-weight:800}
+    .brandTag{font-size:12px; color:var(--muted)}
+
+    .nav{display:none; align-items:center; gap:18px}
+    .nav a{
+      font-size:14px; color:var(--muted);
+      padding:8px 10px; border-radius: 10px;
+    }
+    .nav a:hover{background: rgba(15,42,68,0.06); color: var(--text)}
+    @media (min-width: 960px){ .nav{display:flex} }
+
+    .btnRow{display:flex; align-items:center; gap:10px}
+    .btn{
+      border:1px solid var(--border);
+      background: var(--card);
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+      transition: transform 120ms ease, box-shadow 120ms ease;
+      user-select:none;
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow: var(--shadow2)}
+    .btnPrimary{
+      border-color: rgba(46,107,255,0.35);
+      background: linear-gradient(135deg, var(--blue), var(--blue2));
+      color:white;
+      box-shadow: 0 16px 40px rgba(46,107,255,0.25);
+    }
+    .btnSmall{padding:10px 12px; border-radius: 12px; font-size:13px}
+    .btnGhost{background: transparent}
+
+    /* Hero */
+    .heroGrid{display:grid; gap:28px; grid-template-columns:1fr; align-items:center;}
+    @media (min-width: 960px){ .heroGrid{grid-template-columns: 1.08fr 0.92fr; gap:46px} }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(46,107,255,0.25);
+      background: rgba(255,255,255,0.70);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--navy);
+      width: fit-content;
+    }
+    .dot{width:8px; height:8px; border-radius:50%; background: var(--blue)}
+    h1{margin:14px 0 12px; font-size: 40px; letter-spacing:-0.9px; line-height:1.05;}
+    @media (min-width: 960px){ h1{font-size:54px} }
+    .lead{margin:0; color:var(--muted); font-size:17px; line-height:1.6; max-width:52ch;}
+    .heroCTA{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px}
+    .micro{margin-top:10px; color:var(--muted); font-size:13px;}
+
+    /* Hero visual */
+    .mockWrap{
+      position:relative;
+      border-radius: var(--r24);
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.65));
+      border: 1px solid rgba(15,42,68,0.10);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      padding: 18px;
+      min-height: 340px;
+    }
+    .mockHeader{display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;}
+    .mockTitle{font-weight:800}
+    .mockBadge{
+      font-size:12px; color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.75);
+    }
+    .mockGrid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+    .kpiCard{
+      border-radius:16px; border:1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.85);
+      padding: 12px;
+      box-shadow: 0 10px 20px rgba(15,42,68,0.06);
+    }
+    .kpiTop{display:flex; align-items:center; justify-content:space-between; margin-bottom:10px}
+    .kpiName{font-size:12px; color: var(--muted)}
+    .kpiValue{font-weight:900; font-size:18px}
+    .bar{height:10px; border-radius:999px; background: rgba(46,107,255,0.14); overflow:hidden;}
+    .bar > span{display:block; height:100%; width:62%; background: linear-gradient(90deg, var(--blue), rgba(46,107,255,0.55)); border-radius:999px;}
+
+    .floatChip{
+      position:absolute;
+      border-radius:999px;
+      border:1px solid rgba(46,107,255,0.25);
+      background: rgba(255,255,255,0.78);
+      padding: 10px 12px;
+      font-size:12px;
+      color: var(--navy);
+      box-shadow: 0 14px 34px rgba(15,42,68,0.10);
+      backdrop-filter: blur(10px);
+      display:flex; gap:8px; align-items:center;
+      animation: floaty 6s ease-in-out infinite;
+    }
+    .floatChip:nth-child(1){top:18px; right:18px; animation-delay:0s}
+    .floatChip:nth-child(2){bottom:16px; right:24px; animation-delay:1.5s}
+    .floatChip:nth-child(3){bottom:44px; left:18px; animation-delay:3s}
+    @keyframes floaty{0%,100%{transform: translateY(0)} 50%{transform: translateY(-8px)}}
+
+    /* Proof strip */
+    .proof{
+      padding:18px 0;
+      border-top:1px solid rgba(15,42,68,0.08);
+      border-bottom:1px solid rgba(15,42,68,0.08);
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(8px);
+    }
+    .proofRow{
+      display:flex; gap:12px; flex-wrap:wrap;
+      align-items:center; justify-content:center;
+      color: var(--muted);
+      font-size:13px;
+    }
+    .proofBadge{
+      display:flex; gap:8px; align-items:center;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.8);
+    }
+
+    h2{margin:0 0 12px; font-size:28px; letter-spacing:-0.3px;}
+    @media(min-width:960px){ h2{font-size:34px} }
+    .sub{margin:0; color:var(--muted); line-height:1.7; max-width:70ch;}
+
+    .grid2{display:grid; gap:18px; grid-template-columns:1fr}
+    @media(min-width:960px){ .grid2{grid-template-columns:1fr 1fr; gap:28px} }
+
+    .card{
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(15,42,68,0.10);
+      border-radius: 24px;
+      box-shadow: var(--shadow2);
+      padding: 22px;
+    }
+
+    .miniGrid{display:grid; gap:12px; grid-template-columns:1fr; margin-top:14px;}
+    @media(min-width:960px){ .miniGrid{grid-template-columns:1fr 1fr 1fr} }
+    .miniCard{
+      border-radius:18px;
+      border:1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.86);
+      padding:14px;
+    }
+    .miniTitle{font-weight:800; margin:0 0 6px}
+    .miniText{margin:0; color:var(--muted); line-height:1.6; font-size:14px}
+
+    .steps{display:grid; gap:12px; grid-template-columns:1fr}
+    @media(min-width:960px){ .steps{grid-template-columns:1fr 1fr 1fr} }
+    .stepNum{
+      width:34px; height:34px; border-radius:12px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(46,107,255,0.12);
+      border:1px solid rgba(46,107,255,0.22);
+      font-weight:900; color: var(--navy);
+      margin-bottom:10px;
+    }
+
+    .valueGrid{display:grid; gap:12px; grid-template-columns:1fr}
+    @media(min-width:960px){ .valueGrid{grid-template-columns:1fr 1fr} }
+    .valueItem{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:14px;
+      border-radius:18px;
+      border:1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.86);
+    }
+    .icon{
+      width:34px; height:34px; border-radius:12px;
+      background: rgba(46,107,255,0.12);
+      border:1px solid rgba(46,107,255,0.22);
+      flex: 0 0 auto;
+    }
+
+    .videoBox{
+      border-radius:24px;
+      border:1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.85);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+      aspect-ratio: 16/9;
+    }
+    .videoOverlay{
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer;
+      background:
+        radial-gradient(800px 300px at 30% 10%, rgba(46,107,255,0.25), transparent 60%),
+        radial-gradient(700px 300px at 80% 30%, rgba(15,42,68,0.18), transparent 60%),
+        rgba(15,42,68,0.05);
+    }
+    .play{
+      width:74px; height:74px; border-radius:999px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(15,42,68,0.12);
+      box-shadow: var(--shadow);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .play:before{
+      content:"";
+      display:block;
+      width:0; height:0;
+      border-left: 16px solid var(--blue);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      margin-left: 3px;
+    }
+    .videoFrame{width:100%; height:100%; border:0; display:none;}
+
+    .tiles{display:grid; gap:12px; grid-template-columns:1fr}
+    @media(min-width:960px){ .tiles{grid-template-columns:1fr 1fr 1fr 1fr} }
+    .tile{
+      padding:16px;
+      border-radius:18px;
+      border:1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.86);
+    }
+    .tileTitle{font-weight:900; margin:0 0 6px}
+    .tileText{margin:0; color:var(--muted); line-height:1.6; font-size:14px}
+
+    details{
+      border-radius:18px;
+      border:1px solid rgba(15,42,68,0.10);
+      background: rgba(255,255,255,0.86);
+      padding:14px 16px;
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer; font-weight:800;
+      list-style:none;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    summary::-webkit-details-marker{display:none}
+    .faqText{color:var(--muted); line-height:1.7; margin:10px 0 0}
+
+    .ctaBig{
+      text-align:center;
+      padding:34px 22px;
+      border-radius:28px;
+      border:1px solid rgba(46,107,255,0.24);
+      background:
+        radial-gradient(900px 260px at 50% 0%, rgba(46,107,255,0.22), transparent 60%),
+        rgba(255,255,255,0.80);
+      box-shadow: var(--shadow);
+    }
+    .ctaBig h2{margin-bottom:10px}
+    .ctaBig .sub{margin: 0 auto 18px}
+    .centerRow{display:flex; justify-content:center; gap:12px; flex-wrap:wrap}
+
+    footer{
+      padding:34px 0;
+      border-top:1px solid rgba(15,42,68,0.08);
+      color: var(--muted);
+      font-size:12px;
+    }
+    .footerRow{display:flex; flex-direction:column; gap:12px}
+    @media(min-width:960px){ .footerRow{flex-direction:row; align-items:center; justify-content:space-between} }
+    .footerLinks{display:flex; gap:14px; flex-wrap:wrap}
+    .footerLinks a{color:var(--muted)}
+    .footerLinks a:hover{color:var(--text)}
   </style>
 </head>
 
 <body>
+  <script>
+    // CONFIG
+    window.STRATA_APP_URL = "https://strataadv.lovable.app";
+    window.STRATA_BOOK_CALL_URL = ""; // optional: add calendly link later
 
-  <section class="hero">
-    <h1>AI-Powered Growth Diagnostics for Scaling Businesses</h1>
-    <p>Identify profit leaks, remove bottlenecks, and unlock margin growth with a clear action plan — delivered instantly inside the Strata app.</p>
+    function track(eventName, params){
+      try{
+        if (typeof gtag === "function") gtag("event", eventName, params || {});
+        window.__strataEvents = window.__strataEvents || [];
+        window.__strataEvents.push({ event: eventName, params: params || {}, ts: Date.now() });
+      }catch(e){}
+    }
 
-    <div class="cta-row">
-      <!-- IMPORTANT: point to the working Loveable route -->
-      <a
-        href="https://strataadv.lovable.app/login"
-        target="_blank"
-        rel="noopener"
-        class="cta-primary"
-        onclick="return trackFreeAnalysisClick();"
-      >
-        Get Your Free Analysis
-      </a>
+    function openApp(source){
+      track("cta_click", { source: source || "unknown" });
+      window.open(window.STRATA_APP_URL, "_blank", "noopener,noreferrer");
+    }
 
-      <!-- Optional helper CTA for first-time users -->
-      <a
-        href="https://strataadv.lovable.app/signup"
-        target="_blank"
-        rel="noopener"
-        class="cta-secondary"
-        onclick="return trackSignupClick();"
-      >
-        New here? Create account
-      </a>
+    function bookCall(source){
+      track("book_call_click", { source: source || "unknown" });
+      if (!window.STRATA_BOOK_CALL_URL) return;
+      window.open(window.STRATA_BOOK_CALL_URL, "_blank", "noopener,noreferrer");
+    }
+  </script>
+
+  <header class="header">
+    <div class="container">
+      <div class="headerInner">
+        <a href="#top" class="brand" aria-label="Strata Growth Advisors">
+          <div class="logo" aria-hidden="true">
+            <img src="/assets/strata-logo.png" alt="Strata Growth Advisors Logo">
+          </div>
+          <div class="brandText">
+            <div class="brandName">Strata Growth Advisors</div>
+            <div class="brandTag">AI-powered operational intelligence</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#how" onclick="track('nav_click',{target:'how',source:'header'})">How it Works</a>
+          <a href="#value" onclick="track('nav_click',{target:'value',source:'header'})">What You Get</a>
+          <a href="#demo" onclick="track('nav_click',{target:'demo',source:'header'})">Demo</a>
+          <a href="#faq" onclick="track('nav_click',{target:'faq',source:'header'})">FAQ</a>
+        </nav>
+
+        <div class="btnRow">
+          <button class="btn btnSmall btnGhost" onclick="bookCall('header')" type="button">Book a Strategy Call</button>
+          <button class="btn btnSmall btnPrimary" onclick="openApp('header')" type="button">Get Your Free Growth Analysis</button>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <div class="microcopy">
-      No calls. No back-and-forth. Complete the form in Strata → generate your report → download or email it to yourself.
-    </div>
-  </section>
+  <main id="top">
+    <section class="section">
+      <div class="container">
+        <div class="heroGrid">
+          <div>
+            <div class="pill"><span class="dot"></span><span>Fast, structured, actionable</span></div>
+            <h1>Turn Operational Chaos Into Predictable Growth</h1>
+            <p class="lead">
+              Strata analyzes your operations, identifies hidden inefficiencies, and delivers a clear action plan in minutes.
+            </p>
 
-  <section class="value">
-    <h2>What You’ll Walk Away With</h2>
-    <ul>
-      <li>Visibility into hidden cost leaks</li>
-      <li>Prioritized quick wins</li>
-      <li>90-day growth roadmap</li>
-      <li>KPI tracking framework</li>
-    </ul>
-  </section>
+            <div class="heroCTA">
+              <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">Get Your Free Growth Analysis</button>
+              <a class="btn" href="#how" onclick="track('nav_click',{target:'how',source:'hero_secondary'})">See How It Works</a>
+            </div>
 
-  <section class="how">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Click “Get Your Free Analysis”</li>
-      <li>Create an account (first time only) or sign in</li>
-      <li>Complete the secure form in Strata and click “Generate report”</li>
-      <li>View your report on-screen, then download or email it instantly</li>
-    </ol>
-  </section>
+            <div class="micro">
+              Built by global operations and supply chain experts. Takes under 3 minutes. No setup required.
+            </div>
+          </div>
 
-  <section class="card">
-    <h2>Case Study</h2>
-    <h3>14% Profit Improvement in 90 Days</h3>
-    <p>A distributor reduced excess inventory and optimized replenishment, unlocking significant margin gains and working capital.</p>
-  </section>
+          <div class="mockWrap" aria-label="Dashboard mockup">
+            <div class="mockHeader">
+              <div class="mockTitle">Operational Snapshot</div>
+              <div class="mockBadge">Preview</div>
+            </div>
 
-  <footer>
-    Strata Growth Advisors • www.strataadv.com • Confidential
-  </footer>
+            <div class="mockGrid">
+              <div class="kpiCard">
+                <div class="kpiTop"><div class="kpiName">Margin Leakage</div><div class="kpiValue">7.4%</div></div>
+                <div class="bar"><span style="width:74%"></span></div>
+              </div>
+              <div class="kpiCard">
+                <div class="kpiTop"><div class="kpiName">Inventory Drift</div><div class="kpiValue">12d</div></div>
+                <div class="bar"><span style="width:58%"></span></div>
+              </div>
+              <div class="kpiCard">
+                <div class="kpiTop"><div class="kpiName">Delivery Reliability</div><div class="kpiValue">89%</div></div>
+                <div class="bar"><span style="width:66%"></span></div>
+              </div>
+              <div class="kpiCard">
+                <div class="kpiTop"><div class="kpiName">Quick Wins</div><div class="kpiValue">5</div></div>
+                <div class="bar"><span style="width:62%"></span></div>
+              </div>
+            </div>
 
+            <div class="floatChip"><span class="dot"></span><span>KPI framework included</span></div>
+            <div class="floatChip"><span class="dot"></span><span>90-day roadmap</span></div>
+            <div class="floatChip"><span class="dot"></span><span>Cost leakage insights</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" aria-label="Credibility strip">
+      <div class="container">
+        <div class="proofRow">
+          <div class="proofBadge"><span class="dot"></span>25+ years operational leadership</div>
+          <div class="proofBadge"><span class="dot"></span>Built for SMEs and scaling teams</div>
+          <div class="proofBadge"><span class="dot"></span>Instant insight, structured roadmap</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid2">
+          <div>
+            <h2>Most Businesses Don’t Know Where They’re Losing Money</h2>
+            <p class="sub">
+              Inefficiencies hide in plain sight. Profit leaks through process gaps, not just obvious costs.
+              Teams often operate in reactive firefighting mode instead of a predictable execution rhythm.
+            </p>
+            <div style="height:14px"></div>
+            <div class="miniCard">
+              <p class="miniText">
+                Common leakage areas: purchasing variance, idle time, rework, inventory losses, discounting, emergency logistics.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Meet Strata</h2>
+            <p class="sub">
+              Strata is an AI-powered operational diagnostic platform that identifies bottlenecks, estimates impact, and tells you what to fix first.
+            </p>
+
+            <div class="miniGrid">
+              <div class="miniCard"><p class="miniTitle">Identify bottlenecks</p><p class="miniText">Pinpoint where execution breaks down and why.</p></div>
+              <div class="miniCard"><p class="miniTitle">Quantify impact</p><p class="miniText">Estimate cost leakage and working capital pressure.</p></div>
+              <div class="miniCard"><p class="miniTitle">Prioritize fixes</p><p class="miniText">Get quick wins + a 90-day roadmap.</p></div>
+            </div>
+
+            <div style="margin-top:14px">
+              <button class="btn btnPrimary" onclick="openApp('solution')" type="button">Start My Analysis</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <h2>How It Works</h2>
+        <p class="sub">Three simple steps to turn your inputs into a structured action plan.</p>
+
+        <div style="height:16px"></div>
+        <div class="steps">
+          <div class="miniCard"><div class="stepNum">1</div><p class="miniTitle">Answer a short diagnostic</p><p class="miniText">Tell us about operations, costs, and pain points.</p></div>
+          <div class="miniCard"><div class="stepNum">2</div><p class="miniTitle">AI analysis</p><p class="miniText">We evaluate patterns, inefficiencies, and opportunities.</p></div>
+          <div class="miniCard"><div class="stepNum">3</div><p class="miniTitle">Get your action plan</p><p class="miniText">Receive quick wins, strategy, and KPIs to track progress.</p></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <button class="btn btnPrimary" onclick="openApp('how_it_works')" type="button">Get Your Free Growth Analysis</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="value">
+      <div class="container">
+        <h2>What You Get</h2>
+        <p class="sub">Clear, prioritized recommendations designed for action.</p>
+
+        <div style="height:16px"></div>
+        <div class="valueGrid">
+          <div class="valueItem"><div class="icon"></div><div><div class="miniTitle">Operational bottleneck identification</div><div class="miniText">Know where execution is breaking down.</div></div></div>
+          <div class="valueItem"><div class="icon"></div><div><div class="miniTitle">Cost leakage insights</div><div class="miniText">Spot silent drains on margin and cash.</div></div></div>
+          <div class="valueItem"><div class="icon"></div><div><div class="miniTitle">Prioritized quick wins</div><div class="miniText">Immediate steps for the next 30 days.</div></div></div>
+          <div class="valueItem"><div class="icon"></div><div><div class="miniTitle">90-day operational roadmap</div><div class="miniText">A realistic plan to improve rhythm and control.</div></div></div>
+          <div class="valueItem"><div class="icon"></div><div><div class="miniTitle">KPI tracking framework</div><div class="miniText">A simple cadence that drives execution.</div></div></div>
+          <div class="valueItem"><div class="icon"></div><div><div class="miniTitle">Risk watchouts and next steps</div><div class="miniText">Avoid common mistakes while implementing change.</div></div></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <button class="btn btnPrimary" onclick="openApp('value')" type="button">Start My Analysis</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="grid2">
+          <div>
+            <h2>See Strata in Action</h2>
+            <p class="sub">Watch how a short diagnostic turns into a clear growth roadmap in minutes.</p>
+
+            <div style="height:16px"></div>
+            <div class="btnRow">
+              <button class="btn btnPrimary" onclick="openApp('demo_primary')" type="button">Try It Yourself</button>
+              <button class="btn" onclick="bookCall('demo_secondary')" type="button">Book a Strategy Call</button>
+            </div>
+
+            <div class="micro">Replace the placeholder with a 45–60 second demo video when ready.</div>
+          </div>
+
+          <div class="videoBox" aria-label="Demo video">
+            <iframe class="videoFrame" id="videoFrame"
+              title="Strata demo video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+            <div class="videoOverlay" id="videoOverlay" role="button" tabindex="0" aria-label="Play demo video">
+              <div class="play" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why Strata Is Different</h2>
+        <p class="sub">No long engagements. No complex implementation. Just clarity and action.</p>
+
+        <div style="height:16px"></div>
+        <div class="tiles">
+          <div class="tile"><p class="tileTitle">No long consulting engagements</p><p class="tileText">Get structured outputs without waiting weeks.</p></div>
+          <div class="tile"><p class="tileTitle">No complex software implementation</p><p class="tileText">No ERP required. Start with what you have.</p></div>
+          <div class="tile"><p class="tileTitle">No waiting</p><p class="tileText">Fast diagnostic, immediate direction.</p></div>
+          <div class="tile"><p class="tileTitle">Built for execution</p><p class="tileText">Quick wins + a practical 90-day roadmap.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <p class="sub">Quick answers to common questions.</p>
+
+        <div style="height:16px"></div>
+
+        <details><summary>How long does it take? <span aria-hidden="true">+</span></summary><div class="faqText">Most diagnostics take under 3 minutes to complete.</div></details>
+        <details><summary>Do I need an ERP? <span aria-hidden="true">+</span></summary><div class="faqText">No. Strata works with basic operational inputs.</div></details>
+        <details><summary>Is the report confidential? <span aria-hidden="true">+</span></summary><div class="faqText">Yes. Your report is intended for internal use and treated as confidential.</div></details>
+        <details><summary>What will I receive? <span aria-hidden="true">+</span></summary><div class="faqText">A clear report with key findings, quick wins, strategic recommendations, KPIs, and next steps.</div></details>
+        <details><summary>Is this a consulting engagement? <span aria-hidden="true">+</span></summary><div class="faqText">No. This is a self-serve diagnostic that produces an actionable roadmap.</div></details>
+        <details><summary>Can I talk to an advisor? <span aria-hidden="true">+</span></summary><div class="faqText">Yes. Use “Book a Strategy Call” to schedule a discussion.</div></details>
+
+        <div style="margin-top:16px">
+          <button class="btn btnPrimary" onclick="openApp('faq')" type="button">Start My Analysis</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ctaBig">
+          <h2>Ready to See What’s Holding Your Business Back?</h2>
+          <p class="sub">Start your free analysis and get a clear action plan today.</p>
+          <div class="centerRow" style="margin-top:14px">
+            <button class="btn btnPrimary" onclick="openApp('final_cta')" type="button">Get My Free Growth Analysis</button>
+            <button class="btn" onclick="bookCall('final_secondary')" type="button">Book a Strategy Call</button>
+          </div>
+          <div class="micro">Takes under 3 minutes. No setup required.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footerRow">
+          <div>
+            <div style="font-weight:900; color: var(--text)">Strata Growth Advisors</div>
+            <div style="margin-top:6px">AI-powered operational intelligence for growing businesses</div>
+          </div>
+          <div class="footerLinks">
+            <a href="/privacy.html" onclick="track('footer_click',{target:'privacy'})">Privacy</a>
+            <a href="/terms.html" onclick="track('footer_click',{target:'terms'})">Terms</a>
+            <a href="mailto:hello@strataadv.com" onclick="track('footer_click',{target:'contact'})">Contact</a>
+          </div>
+        </div>
+        <div style="margin-top:16px; font-size:12px">© <span id="year"></span> Strata Growth Advisors. All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // scroll depth
+    (function(){
+      const marks=[25,50,75,90], fired=new Set();
+      function onScroll(){
+        const d=document.documentElement;
+        const st=window.scrollY||d.scrollTop;
+        const h=(d.scrollHeight-d.clientHeight)||1;
+        const pct=Math.round((st/h)*100);
+        marks.forEach(m=>{ if(pct>=m && !fired.has(m)){ fired.add(m); track("scroll_depth",{percent:m}); } });
+      }
+      window.addEventListener("scroll", onScroll, {passive:true});
+      onScroll();
+    })();
+
+    // demo click-to-play (replace YT_ID when you have a real demo)
+    (function(){
+      const overlay=document.getElementById("videoOverlay");
+      const frame=document.getElementById("videoFrame");
+      const YT_ID="dQw4w9WgXcQ"; // placeholder
+      const ytUrl="https://www.youtube.com/embed/"+YT_ID+"?autoplay=1&rel=0&modestbranding=1";
+      function play(){
+        track("video_play",{source:"demo_section"});
+        frame.src=ytUrl;
+        frame.style.display="block";
+        overlay.style.display="none";
+      }
+      overlay.addEventListener("click", play);
+      overlay.addEventListener("keydown", (e)=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); play(); }});
+    })();
+
+    track("page_view",{page:"landing"});
+  </script>
 </body>
 </html>
