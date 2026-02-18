@@ -28,6 +28,19 @@ body {
 .logo {
   font-weight:700;
 }
+/* Clean logo sizing */
+.logo img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 .hero {
   text-align:center;
