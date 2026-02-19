@@ -4,50 +4,57 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Strata Growth Advisors | AI Operational Diagnostics for Clear Growth Decisions</title>
-  <meta name="description" content="Turn operational complexity into clear, confident growth decisions. Get an instant, consulting-grade diagnostic: profit leaks, bottlenecks, quick wins, KPI framework, and a 90-day roadmap — in minutes." />
+  <title>Strata Growth Advisors | Zyntro — AI Decision Intelligence for SMEs</title>
+  <meta name="description" content="Zyntro delivers AI-powered deep business analysis and strategic decision intelligence to SMEs—automatically detecting bottlenecks and surfacing clear, actionable growth paths. Clear insights. Smart decisions. Real growth." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://strataadv.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Turn operational complexity into clear, confident growth decisions." />
-  <meta property="og:description" content="Instant, consulting-grade operational diagnostic: profit leaks, bottlenecks, quick wins, KPIs, and a 90-day roadmap — in minutes." />
+  <meta property="og:title" content="Zyntro — Clear insights. Smart decisions. Real growth." />
+  <meta property="og:description" content="AI-powered decision intelligence for SMEs: detect bottlenecks, prioritize high-impact actions, and scale with confidence." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://strataadv.com/" />
   <meta property="og:image" content="https://strataadv.com/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://strataadv.com/assets/og-image.png" />
 
-  <!-- Favicons (repo root files) -->
+  <!-- Favicons -->
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#0B1B2E">
+  <meta name="theme-color" content="#061320">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#060B14;
-      --bg2:#0B1220;
-      --card: rgba(255,255,255,0.06);
-      --card2: rgba(255,255,255,0.08);
+      --bg:#050B14;
+      --bg2:#061320;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.08);
       --border: rgba(255,255,255,0.12);
       --text:#EEF3FF;
-      --muted: rgba(238,243,255,0.72);
+      --muted: rgba(238,243,255,0.74);
       --muted2: rgba(238,243,255,0.58);
-      --blue:#2E6BFF;
-      --blue2:#67A0FF;
-      --navyGlow: rgba(46,107,255,0.25);
+
+      /* Navy -> Teal */
+      --teal:#1FD3C6;
+      --teal2:#43E7DB;
+      --tealGlow: rgba(31,211,198,0.22);
+      --tealGlow2: rgba(67,231,219,0.16);
+
       --shadow: 0 24px 90px rgba(0,0,0,0.55);
       --shadow2: 0 18px 60px rgba(0,0,0,0.38);
+
       --max: 1180px;
-      --r: 22px;
+      --r: 18px;
+      --r2: 24px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -55,49 +62,57 @@
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(1000px 520px at 18% 10%, rgba(46,107,255,0.28), transparent 60%),
-        radial-gradient(900px 520px at 86% 18%, rgba(103,160,255,0.20), transparent 55%),
-        radial-gradient(900px 520px at 50% 80%, rgba(46,107,255,0.14), transparent 60%),
+        radial-gradient(1000px 520px at 16% 10%, var(--tealGlow), transparent 60%),
+        radial-gradient(900px 520px at 86% 20%, var(--tealGlow2), transparent 55%),
+        radial-gradient(900px 520px at 50% 80%, rgba(31,211,198,0.12), transparent 60%),
         linear-gradient(180deg, var(--bg), var(--bg2));
       overflow-x:hidden;
     }
     a{color:inherit; text-decoration:none}
-    .container{max-width: var(--max); margin:0 auto; padding: 0 22px}
-    @media(min-width:960px){ .container{padding: 0 44px} }
+    .container{max-width: var(--max); margin:0 auto; padding: 0 18px}
+    @media(min-width:960px){ .container{padding: 0 40px} }
 
     /* Header */
     .header{
       position:sticky; top:0; z-index:99;
-      background: rgba(6,11,20,0.62);
+      background: rgba(5,11,20,0.68);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(255,255,255,0.10);
     }
     .headerInner{
       display:flex; align-items:center; justify-content:space-between;
-      padding: 14px 0;
-      gap: 14px;
+      padding: 12px 0;
+      gap: 12px;
     }
-    .brand{display:flex; align-items:center; gap:12px; min-width: 240px}
+    .brand{display:flex; align-items:center; gap:12px; min-width: 290px}
     .logoWrap{
-      background:#ffffff;
+      background:#fff;
       padding:6px 10px;
-      border-radius:8px;
+      border-radius:10px;
       display:flex;
       align-items:center;
       box-shadow:0 6px 18px rgba(0,0,0,.35);
       border: 1px solid rgba(0,0,0,0.06);
     }
-    .brandLogo{
-      height:36px;
-      width:auto;
-      object-fit:contain;
-      display:block;
-    }
+    .brandLogo{height:34px; width:auto; display:block}
     .brandText{display:flex; flex-direction:column; line-height:1.1}
     .brandName{font-weight:900; letter-spacing:-0.2px}
-    .brandTag{font-size:12px; color: var(--muted2)}
+    .brandTag{font-size:12px; color: var(--muted2); display:flex; gap:10px; align-items:center; flex-wrap:wrap}
 
-    .nav{display:none; gap:10px; align-items:center}
+    /* Zyntro mark */
+    .zyntroMark{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
+    .zyntroLogo{height:16px; width:auto; display:block; object-fit:contain}
+    .zyntroText{font-weight:900; letter-spacing:-0.2px; color: rgba(238,243,255,0.92); font-size:12.5px}
+
+    .nav{display:none; gap:8px; align-items:center}
     .nav a{
       font-size:13px;
       color: var(--muted);
@@ -118,199 +133,220 @@
       border: 1px solid rgba(255,255,255,0.16);
       background: rgba(255,255,255,0.06);
       color: var(--text);
-      padding: 11px 14px;
+      padding: 10px 14px;
       border-radius: 14px;
-      font-weight: 800;
+      font-weight: 850;
       font-size: 13px;
       cursor:pointer;
-      transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+      transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease, border-color 120ms ease;
       display:inline-flex; align-items:center; gap:10px;
       white-space:nowrap;
     }
     .btn:hover{transform: translateY(-1px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); background: rgba(255,255,255,0.08)}
     .btnPrimary{
-      border-color: rgba(46,107,255,0.45);
-      background: linear-gradient(135deg, var(--blue), var(--blue2));
-      box-shadow: 0 20px 70px rgba(46,107,255,0.28);
-      color:#fff;
+      border-color: rgba(31,211,198,0.42);
+      background: linear-gradient(135deg, var(--teal), var(--teal2));
+      box-shadow: 0 20px 70px rgba(31,211,198,0.22);
+      color:#05121e;
     }
-    .btnPrimary:hover{box-shadow: 0 26px 90px rgba(46,107,255,0.35)}
+    .btnPrimary:hover{box-shadow: 0 26px 90px rgba(31,211,198,0.28)}
     .btnGhost{background: transparent}
 
     /* Sections */
-    .section{padding: 72px 0}
-    @media(min-width:960px){ .section{padding: 92px 0} }
+    .section{padding: 64px 0}
+    @media(min-width:960px){ .section{padding: 84px 0} }
 
     /* Hero */
-    .hero{padding: 52px 0 20px; position:relative;}
+    .hero{padding: 48px 0 10px; position:relative;}
     .heroGrid{
-      display:grid; gap: 26px;
+      display:grid; gap: 18px;
       grid-template-columns: 1fr;
-      align-items:center;
+      align-items:start;
     }
     @media(min-width:980px){
-      .heroGrid{grid-template-columns: 1.05fr 0.95fr; gap: 44px;}
+      .heroGrid{grid-template-columns: 1.06fr 0.94fr; gap: 28px; align-items:center;}
     }
+
+    .pillRow{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
     .pill{
       display:inline-flex; align-items:center; gap:10px;
       padding: 10px 14px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.05);
-      color: var(--muted);
+      color: rgba(238,243,255,0.78);
       font-size: 13px;
       width: fit-content;
     }
-    .dot{width:9px; height:9px; border-radius: 50%; background: var(--blue)}
+    .dot{width:9px; height:9px; border-radius: 50%; background: var(--teal)}
     h1{
-      margin: 16px 0 12px;
-      font-size: 40px;
+      margin: 14px 0 10px;
+      font-size: 38px;
       line-height: 1.04;
       letter-spacing: -1px;
       font-weight: 950;
     }
-    @media(min-width:980px){ h1{font-size: 56px} }
+    @media(min-width:980px){ h1{font-size: 54px} }
     .lead{
       margin:0;
       color: var(--muted);
       font-size: 16px;
-      line-height: 1.7;
-      max-width: 64ch;
+      line-height: 1.75;
+      max-width: 68ch;
     }
-    .heroCTA{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .heroCTA{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; align-items:center}
     .micro{
       margin-top: 10px;
       color: var(--muted2);
       font-size: 12.5px;
       line-height: 1.6;
     }
-    .cred{
-      margin-top: 10px;
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-      color: var(--muted2);
-      font-size: 12.5px;
-      line-height: 1.6;
-    }
-    .credBadge{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 8px 12px;
-      border-radius: 999px;
+
+    /* Right hero panel (dense) */
+    .heroPanel{
+      border-radius: var(--r2);
       border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-      color: var(--muted);
-      font-size: 12.5px;
+      background:
+        radial-gradient(700px 320px at 18% 10%, rgba(31,211,198,0.16), transparent 55%),
+        rgba(255,255,255,0.05);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      overflow:hidden;
+      position:relative;
+    }
+    .panelTop{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      margin-bottom: 12px;
+    }
+    .panelTitle{font-weight:950; letter-spacing:-0.2px}
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(31,211,198,0.22);
+      background: rgba(31,211,198,0.08);
+      color: rgba(238,243,255,0.82);
+      font-size: 12px;
       white-space:nowrap;
     }
+    .panelGrid{display:grid; gap:10px; grid-template-columns: 1fr}
+    @media(min-width:980px){ .panelGrid{grid-template-columns: 1fr; } }
+
+    .panelCard{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      padding: 12px;
+    }
+    .pcTop{display:flex; align-items:center; justify-content:space-between; gap:10px}
+    .pcTitle{font-weight:900; font-size:13px}
+    .pcMeta{color: var(--muted2); font-size:12px}
+    .meter{
+      margin-top:10px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .meter > span{
+      display:block;
+      height:100%;
+      width: 62%;
+      background: linear-gradient(90deg, rgba(31,211,198,0.75), rgba(67,231,219,0.85));
+      border-radius: 999px;
+    }
+    .pcList{
+      margin:10px 0 0;
+      padding-left: 18px;
+      color: rgba(238,243,255,0.74);
+      line-height:1.7;
+      font-size: 12.5px;
+    }
+    .pcList li{margin:4px 0}
 
     /* Proof bar */
     .proof{
-      margin-top: 22px;
+      margin-top: 16px;
       border-top: 1px solid rgba(255,255,255,0.10);
       border-bottom: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.03);
-      padding: 14px 0;
+      padding: 12px 0;
     }
     .proofRow{display:flex; gap:10px; flex-wrap:wrap; justify-content:center}
     .proofBadge{
       display:flex; align-items:center; gap:10px;
-      padding: 10px 12px;
+      padding: 9px 12px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.04);
-      color: var(--muted);
+      color: rgba(238,243,255,0.76);
       font-size: 12.5px;
       white-space:nowrap;
     }
 
-    /* Product mock (image version) */
-    .mock{
-      border-radius: 26px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background:
-        radial-gradient(700px 320px at 18% 10%, rgba(46,107,255,0.22), transparent 55%),
-        rgba(255,255,255,0.05);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      overflow:hidden;
-      position:relative;
-      min-height: 380px;
-    }
-
     /* Headings */
     h2{
-      margin:0 0 12px;
+      margin:0 0 10px;
       font-size: 28px;
       letter-spacing: -0.4px;
       font-weight: 950;
     }
     @media(min-width:980px){ h2{font-size: 36px} }
-    .sub{margin:0; color: var(--muted); line-height:1.75; max-width: 76ch}
+    .sub{margin:0; color: var(--muted); line-height:1.75; max-width: 84ch}
 
-    /* Cards */
-    .grid2{display:grid; gap: 14px; grid-template-columns: 1fr}
-    @media(min-width:980px){ .grid2{grid-template-columns: 1fr 1fr; gap: 18px} }
-
-    .grid3{display:grid; gap: 14px; grid-template-columns: 1fr}
-    @media(min-width:980px){ .grid3{grid-template-columns: 1fr 1fr 1fr; gap: 18px} }
-
+    /* Grids / cards */
+    .grid2{display:grid; gap: 12px; grid-template-columns: 1fr}
+    .grid3{display:grid; gap: 12px; grid-template-columns: 1fr}
+    @media(min-width:980px){
+      .grid2{grid-template-columns: 1fr 1fr; gap: 16px}
+      .grid3{grid-template-columns: 1fr 1fr 1fr; gap: 16px}
+    }
     .card{
-      border-radius: 22px;
+      border-radius: var(--r);
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.05);
       box-shadow: var(--shadow2);
-      padding: 18px;
+      padding: 16px;
     }
     .miniTitle{font-weight: 950; margin: 0 0 8px; letter-spacing:-0.2px}
     .miniText{margin:0; color: var(--muted); line-height:1.7; font-size:14px}
 
+    /* Steps */
     .steps{display:grid; gap: 12px; grid-template-columns: 1fr}
     @media(min-width:980px){ .steps{grid-template-columns: 1fr 1fr 1fr} }
     .stepNum{
       width: 36px; height: 36px;
       border-radius: 12px;
-      background: rgba(46,107,255,0.16);
-      border: 1px solid rgba(46,107,255,0.28);
+      background: rgba(31,211,198,0.14);
+      border: 1px solid rgba(31,211,198,0.26);
       display:flex; align-items:center; justify-content:center;
       font-weight: 950;
       margin-bottom: 10px;
       color: #fff;
     }
 
-    /* Before/After block */
-    .ba{
-      border-radius: 26px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background:
-        radial-gradient(900px 260px at 20% 0%, rgba(46,107,255,0.18), transparent 60%),
-        rgba(255,255,255,0.05);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-    .baGrid{display:grid; gap:14px; grid-template-columns:1fr}
-    @media(min-width:980px){ .baGrid{grid-template-columns:1fr 1fr; gap:18px} }
-    .baTitle{font-weight:950; margin:0 0 10px}
-    .bul{margin:0; padding-left:18px; color: var(--muted); line-height:1.8; font-size:14px}
-    .bul li{margin:6px 0}
-
     /* Quote */
     .quote{
-      border-radius: 26px;
+      border-radius: var(--r2);
       border: 1px solid rgba(255,255,255,0.12);
       background:
-        radial-gradient(900px 260px at 20% 0%, rgba(46,107,255,0.20), transparent 60%),
+        radial-gradient(900px 260px at 20% 0%, rgba(31,211,198,0.18), transparent 60%),
         rgba(255,255,255,0.05);
-      padding: 22px;
+      padding: 20px;
       box-shadow: var(--shadow);
     }
-    .quoteText{margin:0; color: var(--text); font-weight: 850; line-height:1.45; font-size: 18px}
+    .quoteText{margin:0; color: var(--text); font-weight: 900; line-height:1.45; font-size: 18px}
     .quoteMeta{margin-top:10px; color: var(--muted2); font-size: 13px}
 
     /* FAQ */
     details{
-      border-radius: 18px;
+      border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.04);
-      padding: 14px 16px;
+      padding: 12px 14px;
     }
     details + details{margin-top: 10px}
     summary{cursor:pointer; font-weight: 900; color: var(--text); list-style:none; display:flex; justify-content:space-between; align-items:center}
@@ -320,32 +356,43 @@
     /* Final CTA */
     .ctaBig{
       text-align:center;
-      border-radius: 28px;
-      border: 1px solid rgba(46,107,255,0.24);
+      border-radius: 26px;
+      border: 1px solid rgba(31,211,198,0.28);
       background:
-        radial-gradient(900px 300px at 50% 0%, rgba(46,107,255,0.26), transparent 60%),
+        radial-gradient(900px 300px at 50% 0%, rgba(31,211,198,0.22), transparent 60%),
         rgba(255,255,255,0.05);
       box-shadow: var(--shadow);
-      padding: 28px 18px;
+      padding: 22px 16px;
     }
-    .centerRow{display:flex; justify-content:center; gap: 12px; flex-wrap:wrap; margin-top: 14px}
+    .centerRow{display:flex; justify-content:center; gap: 12px; flex-wrap:wrap; margin-top: 12px}
 
     footer{
-      padding: 34px 0;
+      padding: 30px 0;
       border-top: 1px solid rgba(255,255,255,0.10);
       color: var(--muted2);
       font-size: 12px;
     }
     .footerRow{display:flex; flex-direction:column; gap: 12px}
-    @media(min-width:980px){ .footerRow{flex-direction:row; align-items:center; justify-content:space-between} }
+    @media(min-width:980px){ .footerRow{flex-direction:row; align-items:flex-start; justify-content:space-between} }
     .footerLinks{display:flex; gap: 14px; flex-wrap:wrap}
     .footerLinks a{color: var(--muted2)}
     .footerLinks a:hover{color: var(--text)}
+    .disclaimer{
+      margin-top: 10px;
+      color: rgba(238,243,255,0.52);
+      max-width: 110ch;
+      line-height: 1.7;
+    }
+
+    /* Small helper */
+    .kicker{font-weight:900; letter-spacing:-0.2px; color: rgba(238,243,255,0.92)}
+    .muted{color: var(--muted)}
   </style>
 </head>
 
 <body>
   <script>
+    // Marketing site -> Loveable app
     window.STRATA_APP_URL = "https://strataadv.lovable.app";
 
     function openApp(source){
@@ -365,21 +412,26 @@
           </div>
           <div class="brandText">
             <div class="brandName">Strata Growth Advisors</div>
-            <div class="brandTag">AI-powered operational diagnostics</div>
+            <div class="brandTag">
+              <span class="zyntroMark" title="Zyntro platform">
+                <img class="zyntroLogo" src="/assets/zyntro-logo.png" alt="Zyntro logo">
+                <span class="zyntroText">Zyntro</span>
+              </span>
+              <span>AI decision intelligence for SMEs</span>
+            </div>
           </div>
         </a>
 
         <nav class="nav" aria-label="Primary navigation">
-          <a href="#problem">Why Strata</a>
+          <a href="#why">Why Zyntro</a>
           <a href="#how">How it Works</a>
-          <a href="#outcomes">Outcomes</a>
           <a href="#deliverable">What You Get</a>
-          <a href="#who">Who It’s For</a>
           <a href="#faq">FAQ</a>
         </nav>
 
         <div class="btnRow">
-          <button class="btn btnPrimary" onclick="openApp('header')" type="button">Get My Strategic Analysis</button>
+          <button class="btn btnPrimary" onclick="openApp('header')" type="button">Start My Analysis</button>
+          <a class="btn btnGhost" href="#how">See How It Works</a>
         </div>
       </div>
     </div>
@@ -391,112 +443,132 @@
       <div class="container">
         <div class="heroGrid">
           <div>
-            <div class="pill">
-              <span class="dot"></span>
-              <span>Consulting-grade diagnostics, delivered instantly</span>
+            <div class="pillRow">
+              <div class="pill">
+                <span class="dot"></span>
+                <span>Reach your business zenith with Zyntro.</span>
+              </div>
+              <div class="pill" title="Core promise">
+                <span class="dot"></span>
+                <span><span class="kicker">Clear insights.</span> Smart decisions. Real growth.</span>
+              </div>
             </div>
 
-            <h1>Turn operational complexity into clear, confident growth decisions.</h1>
+            <h1>Decision clarity for operators who need to move fast.</h1>
 
             <p class="lead">
-              Strata analyzes how your business actually runs, uncovers profit leaks and bottlenecks,
-              and delivers a prioritized action roadmap — so you know exactly what to fix first.
+              <span class="kicker">Zyntro</span> delivers AI-powered deep business analysis and strategic decision intelligence to SMEs —
+              automatically detecting operational bottlenecks and surfacing clear, actionable growth paths.
             </p>
 
             <div class="heroCTA">
               <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">Get My Strategic Analysis</button>
-              <a class="btn" href="#how">See How It Works</a>
+              <a class="btn" href="#deliverable">What You Get</a>
             </div>
 
-            <div class="micro">
-              Takes 3 minutes • Instant report • No sign-up required
-            </div>
-
-            <div class="cred" aria-label="Credibility">
-              <span class="credBadge"><span class="dot"></span>Built on 25+ years of real-world operations leadership</span>
-              <span class="credBadge"><span class="dot"></span>Designed for real-world constraints (works without ERP)</span>
-            </div>
+            <div class="micro">Takes 3 minutes • Instant report • No sign-up required</div>
           </div>
 
-          <!-- HERO MOCK (your image) -->
-          <div class="mock" aria-label="Product preview">
-            <img
-              src="assets/dashboard-mock-light.png"
-              alt="Strata Report and KPI Preview"
-              style="width:100%; height:auto; border-radius:18px; display:block;"
-            >
-          </div>
+          <!-- Dense hero right panel -->
+          <aside class="heroPanel" aria-label="Zyntro preview panel">
+            <div class="panelTop">
+              <div>
+                <div class="panelTitle">Zyntro Preview</div>
+                <div class="pcMeta">Sample output layout (illustrative)</div>
+              </div>
+              <div class="chip">
+                <span class="dot"></span>
+                <span>Decision Intelligence</span>
+              </div>
+            </div>
+
+            <div class="panelGrid">
+              <div class="panelCard">
+                <div class="pcTop">
+                  <div class="pcTitle">Bottlenecks Detected</div>
+                  <div class="pcMeta">Top 3</div>
+                </div>
+                <div class="meter"><span style="width:72%"></span></div>
+                <ul class="pcList">
+                  <li>Inventory turns too low → cash trapped</li>
+                  <li>Lead-time variance → stockouts + expediting</li>
+                  <li>Decision cadence missing → priorities drift</li>
+                </ul>
+              </div>
+
+              <div class="panelCard">
+                <div class="pcTop">
+                  <div class="pcTitle">High-Impact Decisions</div>
+                  <div class="pcMeta">Next 30 days</div>
+                </div>
+                <div class="meter"><span style="width:64%"></span></div>
+                <ul class="pcList">
+                  <li>Reset reorder logic on A-SKUs</li>
+                  <li>Standardize weekly KPI rhythm</li>
+                  <li>Cut rework loop with SOP checkpoints</li>
+                </ul>
+              </div>
+
+              <div class="panelCard">
+                <div class="pcTop">
+                  <div class="pcTitle">KPI Framework</div>
+                  <div class="pcMeta">Weekly</div>
+                </div>
+                <div class="meter"><span style="width:58%"></span></div>
+                <ul class="pcList">
+                  <li>OTIF • Forecast bias • Inventory turns</li>
+                  <li>Order cycle time • Fill rate • Cash conversion</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn btnPrimary" onclick="openApp('panel_cta')" type="button">Generate My Report</button>
+              <a class="btn" href="#how">How it Works</a>
+            </div>
+
+            <div class="micro">“Zyntro: AI that finds your bottlenecks and charts your growth.”</div>
+          </aside>
         </div>
       </div>
 
       <div class="proof">
         <div class="container">
           <div class="proofRow">
-            <div class="proofBadge"><span class="dot"></span>Profit leaks + root causes</div>
-            <div class="proofBadge"><span class="dot"></span>Quick wins (7–30 days)</div>
-            <div class="proofBadge"><span class="dot"></span>KPI framework + targets</div>
+            <div class="proofBadge"><span class="dot"></span>Bottleneck + root cause detection</div>
+            <div class="proofBadge"><span class="dot"></span>Prioritized growth decisions</div>
+            <div class="proofBadge"><span class="dot"></span>Quick wins + KPI framework</div>
             <div class="proofBadge"><span class="dot"></span>90-day execution roadmap</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROBLEM -->
-    <section class="section" id="problem">
+    <!-- WHY -->
+    <section class="section" id="why">
       <div class="container">
-        <h2>Most businesses don’t lack effort — they lack clarity.</h2>
-        <p class="sub">
-          As operations grow, visibility falls behind. Teams work harder, but priorities remain unclear.
-          Costs quietly accumulate in places nobody is measuring.
-        </p>
+        <h2>Why Zyntro</h2>
+        <p class="sub">Precision analysis meets intuitive guidance — removing complexity so you scale confidently.</p>
 
-        <div style="height:16px"></div>
+        <div style="height:14px"></div>
         <div class="grid3">
           <div class="card">
-            <div class="miniTitle">Hidden inefficiencies</div>
-            <p class="miniText">Profit leaks hide in rework, overtime, stockouts, excess inventory, and avoidable delays.</p>
+            <div class="miniTitle">Decision-ready clarity</div>
+            <p class="miniText">Not more dashboards — the few decisions that matter most, prioritized by impact and feasibility.</p>
           </div>
           <div class="card">
-            <div class="miniTitle">Unclear priorities</div>
-            <p class="miniText">Teams chase many improvements, but the highest-impact actions are rarely obvious.</p>
+            <div class="miniTitle">Automatic bottleneck detection</div>
+            <p class="miniText">Expose where execution breaks and why — before it drains margin and momentum.</p>
           </div>
           <div class="card">
-            <div class="miniTitle">Reactive decision cycles</div>
-            <p class="miniText">When insight arrives late, strategy becomes firefighting instead of prevention.</p>
+            <div class="miniTitle">Action paths that stick</div>
+            <p class="miniText">Quick wins + a 90-day plan, anchored to KPIs and cadence so execution doesn’t fade.</p>
           </div>
         </div>
 
-        <div style="margin-top:16px">
-          <button class="btn btnPrimary" onclick="openApp('problem')" type="button">Get My Strategic Analysis</button>
-          <div class="micro">Instant report • No setup required</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BEFORE / AFTER -->
-    <section class="section">
-      <div class="container">
-        <div class="ba">
-          <div class="baGrid">
-            <div class="card" style="background: rgba(255,255,255,0.04); box-shadow:none;">
-              <div class="baTitle">Before Strata</div>
-              <ul class="bul">
-                <li>Decisions driven by gut, not visibility</li>
-                <li>Too many initiatives, unclear ROI</li>
-                <li>Recurring issues that return every month</li>
-                <li>KPIs tracked, but not tied to action</li>
-              </ul>
-            </div>
-            <div class="card" style="background: rgba(46,107,255,0.08); border-color: rgba(46,107,255,0.22); box-shadow:none;">
-              <div class="baTitle">With Strata</div>
-              <ul class="bul" style="color: rgba(238,243,255,0.78);">
-                <li>Clear diagnosis of what’s breaking and why</li>
-                <li>Prioritized roadmap (what to fix first)</li>
-                <li>Quick wins + 90-day execution plan</li>
-                <li>KPI framework with practical targets</li>
-              </ul>
-            </div>
-          </div>
+        <div style="margin-top:14px">
+          <button class="btn btnPrimary" onclick="openApp('why_cta')" type="button">Get My Strategic Analysis</button>
+          <div class="micro">Instant report • Works without ERP</div>
         </div>
       </div>
     </section>
@@ -507,62 +579,28 @@
         <h2>How it works</h2>
         <p class="sub">Simple, fast, and designed to reduce decision friction.</p>
 
-        <div style="height:16px"></div>
+        <div style="height:14px"></div>
         <div class="steps">
           <div class="card">
             <div class="stepNum">1</div>
-            <div class="miniTitle">Share key inputs</div>
-            <p class="miniText">Answer a short set of questions about costs, bottlenecks, and priorities.</p>
+            <div class="miniTitle">Answer key questions</div>
+            <p class="miniText">Share high-level inputs about costs, operations, constraints, and priorities.</p>
           </div>
           <div class="card">
             <div class="stepNum">2</div>
-            <div class="miniTitle">AI + operational frameworks</div>
-            <p class="miniText">Strata analyzes patterns, identifies root causes, and surfaces leverage points.</p>
+            <div class="miniTitle">Zyntro analysis</div>
+            <p class="miniText">Detect bottlenecks, map root causes, and surface the highest-impact decisions.</p>
           </div>
           <div class="card">
             <div class="stepNum">3</div>
-            <div class="miniTitle">Get a prioritized roadmap</div>
-            <p class="miniText">Receive a consulting-grade report built for execution — not theory.</p>
+            <div class="miniTitle">Receive a growth roadmap</div>
+            <p class="miniText">Get quick wins, KPIs, risks, and a 90-day execution plan you can run immediately.</p>
           </div>
         </div>
 
-        <div style="margin-top:16px">
-          <button class="btn btnPrimary" onclick="openApp('how')" type="button">Get My Strategic Analysis</button>
+        <div style="margin-top:14px">
+          <button class="btn btnPrimary" onclick="openApp('how_cta')" type="button">Generate My Report</button>
           <div class="micro">Takes 3 minutes • Instant report</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OUTCOMES -->
-    <section class="section" id="outcomes">
-      <div class="container">
-        <h2>From uncertainty to confident action</h2>
-        <p class="sub">
-          Strata doesn’t just produce “insights.” It gives direction — what to do next, why it matters, and how to measure progress.
-        </p>
-
-        <div style="height:16px"></div>
-        <div class="grid2">
-          <div class="card">
-            <div class="miniTitle">Identify profit leaks</div>
-            <p class="miniText">Pinpoint the operational drivers behind cost, delays, and missed revenue.</p>
-          </div>
-          <div class="card">
-            <div class="miniTitle">Prioritize high-impact initiatives</div>
-            <p class="miniText">Focus your team on the few actions that move the needle first.</p>
-          </div>
-          <div class="card">
-            <div class="miniTitle">Build execution rhythm</div>
-            <p class="miniText">KPI framework + cadence suggestions to keep improvements from collapsing after week two.</p>
-          </div>
-          <div class="card">
-            <div class="miniTitle">Reduce decision time</div>
-            <p class="miniText">Get a clear starting point so you stop debating and start executing.</p>
-          </div>
-        </div>
-
-        <div style="margin-top:16px">
-          <button class="btn btnPrimary" onclick="openApp('outcomes')" type="button">Get My Strategic Analysis</button>
         </div>
       </div>
     </section>
@@ -570,22 +608,22 @@
     <!-- DELIVERABLE -->
     <section class="section" id="deliverable">
       <div class="container">
-        <h2>What you get (consulting-grade deliverable)</h2>
-        <p class="sub">A structured, action-first output designed for execution — not theory.</p>
+        <h2>What you get</h2>
+        <p class="sub">A consulting-grade deliverable designed for action — with decisions, not noise.</p>
 
-        <div style="height:16px"></div>
+        <div style="height:14px"></div>
         <div class="grid2">
           <div class="card">
             <div class="miniTitle">Executive Summary + Key Findings</div>
-            <p class="miniText">A clear summary of what’s happening and the highest-impact problems to solve first.</p>
+            <p class="miniText">A clear view of what’s happening and what to fix first.</p>
           </div>
           <div class="card">
             <div class="miniTitle">Bottlenecks + Root Causes</div>
-            <p class="miniText">Where execution breaks, why it breaks, and how it shows up as cost, delay, or lost revenue.</p>
+            <p class="miniText">Where execution breaks, why it breaks, and how it shows up as cost or delay.</p>
           </div>
           <div class="card">
-            <div class="miniTitle">Quick Wins (Next 7–30 days)</div>
-            <p class="miniText">Fast actions you can implement with minimal cost to create immediate momentum.</p>
+            <div class="miniTitle">Quick Wins (7–30 days)</div>
+            <p class="miniText">Fast actions you can implement with minimal cost to create momentum.</p>
           </div>
           <div class="card">
             <div class="miniTitle">90-Day Execution Roadmap</div>
@@ -593,7 +631,7 @@
           </div>
           <div class="card">
             <div class="miniTitle">KPI Framework</div>
-            <p class="miniText">The few KPIs that matter, suggested targets, and a weekly review rhythm for accountability.</p>
+            <p class="miniText">The few KPIs that matter, suggested targets, and weekly review rhythm.</p>
           </div>
           <div class="card">
             <div class="miniTitle">Risks + Watchouts</div>
@@ -601,63 +639,18 @@
           </div>
         </div>
 
-        <div style="margin-top:16px">
-          <button class="btn btnPrimary" onclick="openApp('deliverable')" type="button">Get My Strategic Analysis</button>
-          <div class="micro">Instant report • Designed for founders, operators, and leadership teams</div>
+        <div style="margin-top:14px">
+          <button class="btn btnPrimary" onclick="openApp('deliverable_cta')" type="button">Get My Strategic Analysis</button>
         </div>
       </div>
     </section>
 
-    <!-- WHO IT'S FOR -->
-    <section class="section" id="who">
-      <div class="container">
-        <h2>Built for decision-makers</h2>
-        <p class="sub">If decisions feel complex, Strata simplifies the path forward.</p>
-
-        <div style="height:16px"></div>
-        <div class="grid3">
-          <div class="card">
-            <div class="miniTitle">Founders</div>
-            <p class="miniText">Get clarity before scaling — and avoid scaling inefficiency.</p>
-          </div>
-          <div class="card">
-            <div class="miniTitle">Operators</div>
-            <p class="miniText">Identify bottlenecks, reduce waste, and improve day-to-day performance.</p>
-          </div>
-          <div class="card">
-            <div class="miniTitle">Leadership teams</div>
-            <p class="miniText">Align strategy with execution — with KPIs that drive accountability.</p>
-          </div>
-        </div>
-
-        <div style="margin-top:16px">
-          <button class="btn btnPrimary" onclick="openApp('who')" type="button">Get My Strategic Analysis</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- AUTHORITY / PREMIUM NARRATIVE -->
+    <!-- QUOTE -->
     <section class="section">
       <div class="container">
         <div class="quote">
-          <p class="quoteText">
-            “Most businesses don’t lose because of strategy. They lose because execution leaks profit every day — quietly.”
-          </p>
-          <div class="quoteMeta">
-            Strata is built to expose the leaks, explain the root cause, and tell you what to fix first — with a roadmap you can execute immediately.
-          </div>
-        </div>
-
-        <div style="height:14px"></div>
-        <div class="grid2">
-          <div class="card">
-            <div class="miniTitle">Grounded in real operations</div>
-            <p class="miniText">Built on decades of hands-on leadership across supply chain, manufacturing, and business transformation.</p>
-          </div>
-          <div class="card">
-            <div class="miniTitle">Designed for self-serve execution</div>
-            <p class="miniText">No calls, no back-and-forth. You get clear direction on-screen, with a premium PDF download inside the app.</p>
-          </div>
+          <p class="quoteText">“Zyntro doesn’t just analyze — it tells you what to do next.”</p>
+          <div class="quoteMeta">Clear insights. Smart decisions. Real growth.</div>
         </div>
       </div>
     </section>
@@ -668,7 +661,7 @@
         <h2>FAQ</h2>
         <p class="sub">Quick answers.</p>
 
-        <div style="height:14px"></div>
+        <div style="height:12px"></div>
 
         <details>
           <summary>How long does the analysis take? <span aria-hidden="true">+</span></summary>
@@ -677,7 +670,7 @@
 
         <details>
           <summary>Do I need ERP or advanced systems? <span aria-hidden="true">+</span></summary>
-          <div class="faqText">No. Strata is designed to work with real-world constraints and basic operational inputs.</div>
+          <div class="faqText">No. Zyntro is designed to work with real-world constraints and basic operational inputs.</div>
         </details>
 
         <details>
@@ -685,13 +678,8 @@
           <div class="faqText">Yes. The report is intended for internal use and treated as confidential.</div>
         </details>
 
-        <details>
-          <summary>Is this consulting or software? <span aria-hidden="true">+</span></summary>
-          <div class="faqText">It’s a hybrid: AI-driven diagnostics built on consulting-grade frameworks, delivered as a self-serve experience.</div>
-        </details>
-
-        <div style="margin-top:16px">
-          <button class="btn btnPrimary" onclick="openApp('faq')" type="button">Get My Strategic Analysis</button>
+        <div style="margin-top:14px">
+          <button class="btn btnPrimary" onclick="openApp('faq_cta')" type="button">Start My Analysis</button>
         </div>
       </div>
     </section>
@@ -700,12 +688,12 @@
     <section class="section">
       <div class="container">
         <div class="ctaBig">
-          <h2>Ready to make decisions with clarity?</h2>
-          <p class="sub" style="margin:0 auto; max-width:74ch">
-            Run the analysis and uncover the highest-impact opportunities in your business — with a prioritized roadmap you can execute immediately.
+          <h2>Ready to reach your business zenith?</h2>
+          <p class="sub" style="margin:0 auto; max-width:76ch">
+            Run the Zyntro-powered analysis and uncover the highest-impact growth decisions in your business.
           </p>
           <div class="centerRow">
-            <button class="btn btnPrimary" onclick="openApp('final')" type="button">Start My Analysis</button>
+            <button class="btn btnPrimary" onclick="openApp('final_cta')" type="button">Generate My Report</button>
             <a class="btn" href="#how">See How It Works</a>
           </div>
           <div class="micro">Takes 3 minutes • Instant report • No sign-up required</div>
@@ -718,7 +706,17 @@
         <div class="footerRow">
           <div>
             <div style="font-weight:950; color: var(--text)">Strata Growth Advisors</div>
-            <div style="margin-top:6px">AI-powered operational diagnostics for growing businesses</div>
+            <div style="margin-top:6px">
+              Powered by
+              <span class="zyntroMark" style="vertical-align:middle;">
+                <img class="zyntroLogo" src="/assets/zyntro-logo.png" alt="Zyntro logo">
+                <span class="zyntroText">Zyntro</span>
+              </span>
+              <span class="muted">• AI decision intelligence for SMEs</span>
+            </div>
+            <div class="disclaimer">
+              Strata Growth Advisors is an independent company and is not affiliated with any other “Strata” branded organizations.
+            </div>
           </div>
           <div class="footerLinks">
             <a href="/privacy.html">Privacy</a>
