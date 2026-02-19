@@ -4,32 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Strata Growth Advisors | AI Strategic Decision Support for SMEs</title>
-  <meta name="description" content="Get a consulting-grade strategic analysis in minutes. Identify bottlenecks, cost leakage, quick wins, KPIs, and a 90-day execution roadmap." />
+  <title>Strata Growth Advisors | AI Strategic Analysis for SMEs</title>
+  <meta name="description" content="Make smarter operational decisions—faster. Get a consulting-grade strategic analysis in minutes: bottlenecks, root causes, quick wins, KPIs, and a 90-day execution roadmap." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://strataadv.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Make smarter operational decisions — faster." />
-  <meta property="og:description" content="Consulting-grade strategic analysis in minutes: bottlenecks, cost leakage, quick wins, KPIs, and a 90-day execution roadmap." />
+  <meta property="og:title" content="Make smarter operational decisions—faster." />
+  <meta property="og:description" content="A consulting-grade strategic analysis in minutes: bottlenecks, root causes, quick wins, KPIs, and a 90-day execution roadmap." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://strataadv.com/" />
   <meta property="og:image" content="https://strataadv.com/assets/og-image.png" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://strataadv.com/assets/og-image.png" />
 
-  <!-- Favicons (root-level files in your repo) -->
+  <!-- Favicons (repo root files) -->
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#0B1B2E">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -46,6 +42,7 @@
       --muted2: rgba(238,243,255,0.58);
       --blue:#2E6BFF;
       --blue2:#67A0FF;
+      --navyGlow: rgba(46,107,255,0.25);
       --shadow: 0 24px 90px rgba(0,0,0,0.55);
       --shadow2: 0 18px 60px rgba(0,0,0,0.38);
       --max: 1180px;
@@ -88,6 +85,7 @@
       display:flex;
       align-items:center;
       box-shadow:0 6px 18px rgba(0,0,0,.35);
+      border: 1px solid rgba(0,0,0,0.06);
     }
     .brandLogo{
       height:36px;
@@ -126,6 +124,7 @@
       cursor:pointer;
       transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
       display:inline-flex; align-items:center; gap:10px;
+      white-space:nowrap;
     }
     .btn:hover{transform: translateY(-1px); box-shadow: 0 16px 40px rgba(0,0,0,0.35); background: rgba(255,255,255,0.08)}
     .btnPrimary{
@@ -135,9 +134,7 @@
       color:#fff;
     }
     .btnPrimary:hover{box-shadow: 0 26px 90px rgba(46,107,255,0.35)}
-    .btnSecondary{
-      background: rgba(255,255,255,0.06);
-    }
+    .btnGhost{background: transparent}
 
     /* Sections */
     .section{padding: 72px 0}
@@ -204,9 +201,10 @@
       background: rgba(255,255,255,0.04);
       color: var(--muted);
       font-size: 12.5px;
+      white-space:nowrap;
     }
 
-    /* Hero mock frame */
+    /* Product mock (image version) */
     .mock{
       border-radius: 26px;
       border: 1px solid rgba(255,255,255,0.12);
@@ -217,14 +215,7 @@
       padding: 18px;
       overflow:hidden;
       position:relative;
-    }
-    .mock img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(0,0,0,0.12);
+      min-height: 380px;
     }
 
     /* Headings */
@@ -314,257 +305,244 @@
 </head>
 
 <body>
+  <script>
+    window.STRATA_APP_URL = "https://strataadv.lovable.app";
 
-<script>
-  window.STRATA_APP_URL = "https://strataadv.lovable.app";
-  window.STRATA_BOOK_CALL_URL = ""; // add later (Calendly) if you want
+    function openApp(source){
+      try{
+        if (typeof gtag === "function") gtag("event","cta_click",{source: source || "unknown"});
+      }catch(e){}
+      window.open(window.STRATA_APP_URL, "_blank", "noopener,noreferrer");
+    }
+  </script>
 
-  function openApp(source){
-    try{
-      if (typeof gtag === "function") gtag("event","cta_click",{source: source || "unknown"});
-    }catch(e){}
-    window.open(window.STRATA_APP_URL, "_blank", "noopener,noreferrer");
-  }
-
-  function bookCall(){
-    if (!window.STRATA_BOOK_CALL_URL) return;
-    window.open(window.STRATA_BOOK_CALL_URL, "_blank", "noopener,noreferrer");
-  }
-</script>
-
-<header class="header">
-  <div class="container">
-    <div class="headerInner">
-      <a class="brand" href="#top" aria-label="Strata Growth Advisors">
-        <div class="logoWrap">
-          <img class="brandLogo" src="/assets/strata-logo.png" alt="Strata Growth Advisors Logo">
-        </div>
-        <div class="brandText">
-          <div class="brandName">Strata Growth Advisors</div>
-          <div class="brandTag">AI-powered operational intelligence</div>
-        </div>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#how">How it Works</a>
-        <a href="#deliverable">What You Get</a>
-        <a href="#proof">Proof</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-
-      <div class="btnRow">
-        <button class="btn btnPrimary" onclick="openApp('header')" type="button">Get My Strategic Analysis</button>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
+  <header class="header">
     <div class="container">
-      <div class="heroGrid">
-        <div>
-          <div class="pill"><span class="dot"></span><span>Strategic Decision Support Platform powered by AI.</span></div>
-
-          <h1>Make smarter operational decisions — faster.</h1>
-
-          <p class="lead">
-            Strata turns how your business actually runs into evidence-backed insights:
-            where profit leaks, what to fix first, and how to scale with confidence.
-          </p>
-
-          <div class="heroCTA">
-            <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">Get My Strategic Analysis</button>
-            <a class="btn btnSecondary" href="#how">See How It Works</a>
+      <div class="headerInner">
+        <a class="brand" href="#top" aria-label="Strata Growth Advisors">
+          <div class="logoWrap">
+            <img class="brandLogo" src="/assets/strata-logo.png" alt="Strata Growth Advisors Logo">
           </div>
-
-          <div class="micro">
-            Built for founders, operators, and leadership teams who want clarity before decisions.
+          <div class="brandText">
+            <div class="brandName">Strata Growth Advisors</div>
+            <div class="brandTag">AI-powered operational intelligence</div>
           </div>
-        </div>
+        </a>
 
-        <div class="mock" aria-label="Product preview">
-          <img src="assets/dashboard-mock-light.png" alt="Strata Decision Intelligence Dashboard preview">
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#how">How it Works</a>
+          <a href="#deliverable">What You Get</a>
+          <a href="#proof">Proof</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="btnRow">
+          <button class="btn btnPrimary" onclick="openApp('header')" type="button">Get My Strategic Analysis</button>
         </div>
       </div>
     </div>
+  </header>
 
-    <!-- Proof bar -->
-    <div class="proof" id="proof">
+  <main id="top">
+    <section class="hero">
       <div class="container">
-        <div class="proofRow">
-          <div class="proofBadge"><span class="dot"></span>Evidence-backed findings</div>
-          <div class="proofBadge"><span class="dot"></span>Works without ERP</div>
-          <div class="proofBadge"><span class="dot"></span>Quick wins + KPI framework</div>
-          <div class="proofBadge"><span class="dot"></span>90-day execution roadmap</div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="heroGrid">
+          <div>
+            <div class="pill">
+              <span class="dot"></span>
+              <span>Strategic Decision Support Platform, powered by AI</span>
+            </div>
 
-  <!-- HOW -->
-  <section class="section" id="how">
-    <div class="container">
-      <h2>How it works</h2>
-      <p class="sub">A simple workflow designed for speed and decision clarity.</p>
+            <h1>Make smarter operational decisions—faster.</h1>
 
-      <div style="height:16px"></div>
+            <p class="lead">
+              Strata analyzes how your business actually runs and translates it into clear strategic insights:
+              where profit leaks, what to fix first, and how to scale with confidence.
+            </p>
 
-      <div class="steps">
-        <div class="card">
-          <div class="stepNum">1</div>
-          <div class="miniTitle">Answer key questions</div>
-          <p class="miniText">Share how your operations currently run (costs, leakage, bottlenecks, and goals).</p>
-        </div>
-        <div class="card">
-          <div class="stepNum">2</div>
-          <div class="miniTitle">AI strategic analysis</div>
-          <p class="miniText">Strata identifies patterns, root causes, and the highest-leverage opportunities.</p>
-        </div>
-        <div class="card">
-          <div class="stepNum">3</div>
-          <div class="miniTitle">Receive decision roadmap</div>
-          <p class="miniText">Get prioritized actions, KPIs, and a 90-day execution plan you can run immediately.</p>
-        </div>
-      </div>
+            <div class="heroCTA">
+              <button class="btn btnPrimary" onclick="openApp('hero_primary')" type="button">Get My Strategic Analysis</button>
+              <a class="btn" href="#how">See How It Works</a>
+            </div>
 
-      <div style="margin-top:16px">
-        <button class="btn btnPrimary" onclick="openApp('how')" type="button">Get My Strategic Analysis</button>
-      </div>
-    </div>
-  </section>
+            <div class="micro">
+              Built for founders, operators, and leadership teams who want clarity before decisions.
+            </div>
+          </div>
 
-  <!-- DELIVERABLE -->
-  <section class="section" id="deliverable">
-    <div class="container">
-      <h2>What you get (consulting-grade deliverable)</h2>
-      <p class="sub">A structured, action-first report designed for execution — not theory.</p>
-
-      <div style="height:16px"></div>
-
-      <div class="grid2">
-        <div class="card">
-          <div class="miniTitle">Executive Summary + Key Findings</div>
-          <p class="miniText">A clear snapshot of what matters most and where performance is leaking.</p>
-        </div>
-        <div class="card">
-          <div class="miniTitle">Bottlenecks + Root Causes</div>
-          <p class="miniText">What is slowing the business down, why it happens, and where to intervene first.</p>
-        </div>
-        <div class="card">
-          <div class="miniTitle">Quick Wins (Next 7–30 days)</div>
-          <p class="miniText">High-impact actions with minimal complexity to create momentum fast.</p>
-        </div>
-        <div class="card">
-          <div class="miniTitle">90-Day Execution Roadmap</div>
-          <p class="miniText">A phased plan to stabilize, optimize, and scale — with owners and cadence.</p>
-        </div>
-        <div class="card">
-          <div class="miniTitle">KPI Framework</div>
-          <p class="miniText">The few KPIs that matter + how to review them weekly to drive discipline.</p>
-        </div>
-        <div class="card">
-          <div class="miniTitle">Risks + Watchouts</div>
-          <p class="miniText">Common failure points and how to keep improvements from collapsing.</p>
+          <!-- HERO MOCK (this is your dashboard-mock-light.png) -->
+          <div class="mock" aria-label="Product preview">
+            <img
+              src="assets/dashboard-mock-light.png"
+              alt="Decision Intelligence Dashboard Preview"
+              style="width:100%; height:auto; border-radius:18px; display:block;"
+            >
+          </div>
         </div>
       </div>
 
-      <div style="margin-top:16px">
-        <button class="btn btnPrimary" onclick="openApp('deliverable')" type="button">Get My Strategic Analysis</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE -->
-  <section class="section">
-    <div class="container">
-      <div class="quote">
-        <p class="quoteText">
-          “Most businesses don’t fail because of strategy. They fail because execution leaks profit every day — quietly.”
-        </p>
-        <div class="quoteMeta">Strata is built to expose the leaks and tell you what to fix first.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <h2>FAQ</h2>
-      <p class="sub">Quick answers.</p>
-
-      <div style="height:14px"></div>
-
-      <details>
-        <summary>How long does it take? <span aria-hidden="true">+</span></summary>
-        <div class="faqText">Most users complete the diagnostic in under 3 minutes.</div>
-      </details>
-
-      <details>
-        <summary>Do I need ERP or advanced systems? <span aria-hidden="true">+</span></summary>
-        <div class="faqText">No. Strata is designed to work with real-world constraints and basic inputs.</div>
-      </details>
-
-      <details>
-        <summary>Is the report confidential? <span aria-hidden="true">+</span></summary>
-        <div class="faqText">Yes. The report is intended for internal use and treated as confidential.</div>
-      </details>
-
-      <details>
-        <summary>What happens after the trial phase? <span aria-hidden="true">+</span></summary>
-        <div class="faqText">We may introduce tiered subscriptions later. For now, the focus is a stable, premium output.</div>
-      </details>
-
-      <div style="margin-top:16px">
-        <button class="btn btnPrimary" onclick="openApp('faq')" type="button">Get My Strategic Analysis</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="section">
-    <div class="container">
-      <div class="ctaBig">
-        <h2>Ready to make decisions with clarity?</h2>
-        <p class="sub" style="margin:0 auto; max-width:74ch">
-          Run the strategic analysis and uncover the highest-impact opportunities in your business.
-        </p>
-
-        <div class="centerRow">
-          <button class="btn btnPrimary" onclick="openApp('final')" type="button">Get My Strategic Analysis</button>
-          <button class="btn btnSecondary" onclick="bookCall()" type="button">Book a Strategy Call</button>
-        </div>
-
-        <div class="micro">Takes less than 3 minutes • No setup required</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footerRow">
-        <div>
-          <div style="font-weight:950; color: var(--text)">Strata Growth Advisors</div>
-          <div style="margin-top:6px">AI-powered operational intelligence for growing businesses</div>
-        </div>
-        <div class="footerLinks">
-          <a href="/privacy.html">Privacy</a>
-          <a href="/terms.html">Terms</a>
-          <a href="mailto:hello@strataadv.com">Contact</a>
+      <div class="proof" id="proof">
+        <div class="container">
+          <div class="proofRow">
+            <div class="proofBadge"><span class="dot"></span>Evidence-backed findings</div>
+            <div class="proofBadge"><span class="dot"></span>Works without ERP</div>
+            <div class="proofBadge"><span class="dot"></span>Quick wins + KPI framework</div>
+            <div class="proofBadge"><span class="dot"></span>90-day execution roadmap</div>
+          </div>
         </div>
       </div>
-      <div style="margin-top:14px">© <span id="year"></span> Strata Growth Advisors. All rights reserved.</div>
-    </div>
-  </footer>
+    </section>
 
-</main>
+    <section class="section" id="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <p class="sub">A simple workflow designed for speed and decision clarity.</p>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        <div style="height:16px"></div>
+        <div class="steps">
+          <div class="card">
+            <div class="stepNum">1</div>
+            <div class="miniTitle">Answer key questions</div>
+            <p class="miniText">Share how your operations currently run across costs, leakage, and bottlenecks.</p>
+          </div>
+          <div class="card">
+            <div class="stepNum">2</div>
+            <div class="miniTitle">AI strategic analysis</div>
+            <p class="miniText">Strata maps patterns, identifies leverage points, and prioritizes what matters most.</p>
+          </div>
+          <div class="card">
+            <div class="stepNum">3</div>
+            <div class="miniTitle">Receive a decision roadmap</div>
+            <p class="miniText">Get clear actions, KPI focus, risks, and a 90-day plan you can execute immediately.</p>
+          </div>
+        </div>
 
+        <div style="margin-top:16px">
+          <button class="btn btnPrimary" onclick="openApp('how')" type="button">Get My Strategic Analysis</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="deliverable">
+      <div class="container">
+        <h2>What you get (consulting-grade deliverable)</h2>
+        <p class="sub">A structured, action-first output designed for execution—not theory.</p>
+
+        <div style="height:16px"></div>
+        <div class="grid2">
+          <div class="card">
+            <div class="miniTitle">Executive Summary + Key Findings</div>
+            <p class="miniText">A clear summary of what’s happening and the highest-impact problems to solve first.</p>
+          </div>
+          <div class="card">
+            <div class="miniTitle">Bottlenecks + Root Causes</div>
+            <p class="miniText">Where execution breaks, why it breaks, and how it shows up as cost, delay, or lost revenue.</p>
+          </div>
+          <div class="card">
+            <div class="miniTitle">Quick Wins (Next 7–30 days)</div>
+            <p class="miniText">Fast actions you can implement with minimal cost to create immediate momentum.</p>
+          </div>
+          <div class="card">
+            <div class="miniTitle">90-Day Execution Roadmap</div>
+            <p class="miniText">A phased plan to stabilize first, then optimize, then scale with discipline.</p>
+          </div>
+          <div class="card">
+            <div class="miniTitle">KPI Framework</div>
+            <p class="miniText">The few KPIs that matter, how to set targets, and how to review weekly for accountability.</p>
+          </div>
+          <div class="card">
+            <div class="miniTitle">Risks + Watchouts</div>
+            <p class="miniText">Common failure points and how to prevent improvements from collapsing after week two.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px">
+          <button class="btn btnPrimary" onclick="openApp('deliverable')" type="button">Get My Strategic Analysis</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="quote">
+          <p class="quoteText">
+            “Most businesses don’t fail because of strategy. They fail because execution leaks profit every day—quietly.”
+          </p>
+          <div class="quoteMeta">Strata is built to expose the leaks and tell you what to fix first.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <p class="sub">Quick answers.</p>
+
+        <div style="height:14px"></div>
+
+        <details>
+          <summary>How long does the analysis take? <span aria-hidden="true">+</span></summary>
+          <div class="faqText">Most users complete it in under 3 minutes.</div>
+        </details>
+
+        <details>
+          <summary>Do I need ERP or advanced systems? <span aria-hidden="true">+</span></summary>
+          <div class="faqText">No. Strata is designed to work with real-world constraints and basic operational inputs.</div>
+        </details>
+
+        <details>
+          <summary>Is my report confidential? <span aria-hidden="true">+</span></summary>
+          <div class="faqText">Yes. The report is intended for internal use and treated as confidential.</div>
+        </details>
+
+        <details>
+          <summary>What happens after the trial phase? <span aria-hidden="true">+</span></summary>
+          <div class="faqText">We’ll introduce tiered subscriptions later. For now, the focus is a stable, premium, self-serve report output.</div>
+        </details>
+
+        <div style="margin-top:16px">
+          <button class="btn btnPrimary" onclick="openApp('faq')" type="button">Get My Strategic Analysis</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA (redesigned: NO strategy call) -->
+    <section class="section">
+      <div class="container">
+        <div class="ctaBig">
+          <h2>Ready to make decisions with clarity?</h2>
+          <p class="sub" style="margin:0 auto; max-width:74ch">
+            Run the strategic analysis and uncover the highest-impact opportunities in your business.
+          </p>
+          <div class="centerRow">
+            <button class="btn btnPrimary" onclick="openApp('final')" type="button">Get My Strategic Analysis</button>
+            <a class="btn" href="#how">See How It Works</a>
+          </div>
+          <div class="micro">Takes less than 3 minutes • No setup required</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footerRow">
+          <div>
+            <div style="font-weight:950; color: var(--text)">Strata Growth Advisors</div>
+            <div style="margin-top:6px">AI-powered operational intelligence for growing businesses</div>
+          </div>
+          <div class="footerLinks">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="mailto:hello@strataadv.com">Contact</a>
+          </div>
+        </div>
+        <div style="margin-top:14px">© <span id="year"></span> Strata Growth Advisors. All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
